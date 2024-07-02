@@ -7,13 +7,13 @@ nodes:
     nodeType: almalinux-vps
     nodeGroup: cp
     extip: true
-onInstall: setup
-actions:
-  setup:
-    cmd[cp]: |-
-      curl https://raw.githubusercontent.com/reclaimhosting/cyberpanel-jps/main/cyberpanel_rc_install.sh -o /tmp/install.sh
+onInstall:
+  - cmd[cp]: |-
+      curl https://raw.githubusercontent.com/reclaimhosting/cyberpanel-jps/main/install.sh -o /tmp/install.sh
       chmod +x /tmp/install.sh
       bash /tmp/install.sh
+  - restartContainers:
+    nodeGroup: cp
 
 skipNodeEmails: true
 success: |
