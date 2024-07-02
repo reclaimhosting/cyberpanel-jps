@@ -80,15 +80,13 @@ _______________________________________________________________________
 		- Set the TTL to 600
 		- Save ***PLEASE NOTE: DNS MAY TAKE 24-48 HOURS TO PROPAGATE.  RECOMMEND USING [What's my DNS](https://www.whatsmydns.net/) TO VERIFY PROPAGATION PRIOR TO PROCEEDING***
 
-2. In [Reclaim Cloud](https://app.my.reclaim.cloud/)
-		- Click the yellow 'settings' gear next to the custom named environment
-		- Select 'Custom Domains' from the selection in the bottom left
-		- Fill in the number 2 box with the custom subdomain you set DNS for in part 1. and click Bind.
-				- The Bind process can take several minutes but you will be able to use that URL bypassing the SSL warning which we will be resolving in the next step to log in.
-
-3. Logged in using your new custom URL (just not secured *yet*)
-		- At the top you are going to see a warning dialog which advises you that your hostname has not been setup, and to click the link to setup.  Click that link.
-		- Enter the custom subdomain 
+2. Logged in using your new custom URL (just not secured *yet*)
+		- At the top you are going to see a warning dialog ***Please launch the set-up wizard to get maximum out of your CyberPanel installation.*** Click set-up wizard.
+		- Enter the custom subdomain in the Hostname block
+   		- If you are not using email and are not adding a rDNS/PTR record, you are going to need to check the skip box.
+   		- Click Start Configurations
+   		- Once completed: Click Restart CyberPanel
+   		- Wait about 30 seconds and refresh your browser: you will now see your CyberPanel URL secured.
 
 
 
