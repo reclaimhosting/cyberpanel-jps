@@ -5,5 +5,7 @@ targetNodes:
   nodeGroup: '*'
 
 onInstall:
-  - cmd[${targetNodes.nodeGroup}]: |-
-      yum update -y
+  restartContainers:
+  - nodeGroup: cp
+  # - cmd[${targetNodes.nodeGroup}]: |-
+  #     yum update -y

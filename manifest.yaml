@@ -1,8 +1,18 @@
 type: install
 name: almalinux-vps
+version: 8.4.2
 nodes:
   - docker:
     cloudlets: 16
     nodeType: almalinux-vps
     nodeGroup: cp
-version: 8.4.2
+    extip: true
+onInstall: setup
+actions:
+  setup:
+    cmd[cp]: |-
+      
+
+skipNodeEmails: true
+success: |
+  **oh hey it finished**
