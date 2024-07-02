@@ -1,1 +1,2 @@
 - [ ] turn off firewall
+- [ ] cat /etc/cyberpanel/adminpass make it a global variable for use in the "success" message
