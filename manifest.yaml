@@ -11,7 +11,9 @@ onInstall: setup
 actions:
   setup:
     cmd[cp]: |-
-      
+      curl https://raw.githubusercontent.com/reclaimhosting/cyberpanel-jps/main/cyberpanel_rc_install.sh -o /tmp/install.sh
+      chmod +x /tmp/install.sh
+      bash /tmp/install.sh
 
 skipNodeEmails: true
 success: |
