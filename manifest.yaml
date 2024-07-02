@@ -1,0 +1,8 @@
+type: install
+name: almalinux-vps
+nodes:
+  - docker:
+    cloudlets: 16
+    nodeType: almalinux-vps
+    nodeGroup: cp
+version: 8.4.2
