@@ -1,0 +1,9 @@
+type: update
+name: jps debug
+
+targetNodes:
+  nodeGroup: '*'
+
+onInstall:
+  - cmd[${targetNodes.nodeGroup}]: |-
+      yum update -y
