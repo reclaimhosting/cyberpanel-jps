@@ -4,8 +4,6 @@ name: jps debug
 targetNodes:
   nodeGroup: '*'
 
-onInstall:
-  restartContainers:
-  - nodeGroup: cp
-  # - cmd[${targetNodes.nodeGroup}]: |-
-  #     yum update -y
+settings:
+  firewall:
+    enabled: false
