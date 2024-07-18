@@ -4,13 +4,19 @@
 _________________________________
 
 - Custom 
-	- Balancing
+	- Application Server
 		- Elastic VPS - Alma 9.3
 	- Scaling limit - min 1 up to 10 (at a min)
 	- Disk (CyberPanel advises it needs 10GB) 
 	- Access via SLB: Off 
 	- Public IP: On 
 	- Environment Name: *client input*
+ - The following ports will need to be open on the Jelastic FW
+	- TCP 8090 – CyberPanel Admin Console
+ 	- TCP 80 and TCP 443 – Web Server Traffic
+	- TCP 21 and TCP 40110-40210 – FTP Connections
+ 	- TCP 25, 465, 587, 110, 993 – Email Services
+	- TCP 53 and UDP 53 – DNS Traffic
 
 ```
 yum -y install curl-7.76.1-29.el9_4 --allowerasing
@@ -56,20 +62,14 @@ If you want to kill the watchdog , run watchdog kill
 
 ```
 Systemctl disable firewalld --now
+yum remove firewalld
 ```
+
+> Server reboot needed
 
 ***Make note of the URL and credentials.  You will need those.***
 
 
-## Install and enable CSF
-_______________________________________________________________________
-
-1. Use creds provided to log into the CyberPanel Admin
-2. Scroll down till you get see Security under the Server section on the left panel and click
-3. Locate and click on CSF
-4. You should get a red warning advising it was unable to connect. This is fine as CSF is not yet install.  Click the ***Install Now*** button.
-5. Once installed, it could possibly error when trying to auto-refresh, just manually refresh your browser.
-6. All necessary ports have already been added and you are all set.
 
 ## Add custom login URL and SSL
 _______________________________________________________________________
