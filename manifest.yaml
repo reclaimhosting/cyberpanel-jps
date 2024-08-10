@@ -7,6 +7,9 @@ nodes:
     nodeType: almalinux-vps
     nodeGroup: cp
     extip: true
+    isSLBAccessEnabled: false
+    env:
+      JELASTIC_PORTS: 8090
 onInstall:
   - cmd[cp]: |-
       curl https://raw.githubusercontent.com/reclaimhosting/cyberpanel-jps/main/install.sh -o /tmp/install.sh
