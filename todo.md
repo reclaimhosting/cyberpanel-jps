@@ -1,2 +1,2 @@
-- [ ] Open ports on Jelastic Firewall
+- [X] Open ports on Jelastic Firewall
 - [ ] cat /etc/cyberpanel/adminpass make it a global variable for use in the "success" message
