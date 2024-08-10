@@ -1,5 +1,6 @@
 #!/bin/bash
 
+touch /var/lib/dnf/rpmdb_lock.pid
 yum update -y
 yum -y install curl --allowerasing
 
